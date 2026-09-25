@@ -7,14 +7,15 @@
   </span>
   <ul class="links" style="display: flex; list-style: none; gap: 20px">
     @for (link of links(); track link.id){
-      <li
-        class="link"
-        [class.islink]="link.category === 'link'"
-        [style.animation-delay.ms]="link.id * 500"
-      ><a [href]="link.link">{{link.name}}</a></li>
-    }
-    @empty {
-        <li>No pages found.</li>
+    <li
+      class="link"
+      [class.islink]="link.category === 'link'"
+      [style.animation-delay.ms]="link.id * 500"
+    >
+      <app-link [content]="link.name"></app-link>
+    </li>
+    } @empty {
+    <li>No pages found.</li>
     }
   </ul>
   <button

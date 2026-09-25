@@ -1,0 +1,13 @@
+<div class="products" style="display: flex; align-items: center; gap: 20px;">
+  @for (product of products(); track product.id){
+    <div class="product" (click)="onProductClick(product.id)" style="border:1px solid red" [id]="product.id">
+      <img [src]="product.image_url" [alt]="product.name">
+      <h3>{{product.name}}</h3>
+      <p>{{product.description}}</p>
+      <small>{{product.price}}</small>
+      <a [href]="product.url">Visite</a>
+    </div>
+  } @empty{
+    <p>Nenhum produto disponível</p>
+  }
+</div>
