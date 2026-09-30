@@ -1,32 +1,12 @@
-<section
-  class="navbar"
-  style="display: flex; align-items: center; gap: 16px; background: blanchedalmond"
->
-  <span class="brand" style="display: flex; align-items: center">
-    <h2>{{name}}</h2>
-  </span>
-  <ul class="links" style="display: flex; list-style: none; gap: 20px">
-    @for (link of links(); track link.id){
-    <li
-      class="link"
-      [class.islink]="link.category === 'link'"
-      [style.animation-delay.ms]="link.id * 500"
-    >
-      <app-link [content]="link.name"></app-link>
-    </li>
-    } @empty {
-    <li>No pages found.</li>
-    }
-  </ul>
-  <button
-    style="
-      background: none;
-      border: 2px solid black;
-      border-radius: 8px;
-      box-sizing: border-box;
-      padding: 4px;
-    "
-  >
-    Login
-  </button>
+<section class="navbar">
+  <div class="block__1">
+    <img src="" alt=""/>
+    <span>
+      {{PageName()}}
+    </span>
+  </div>
+  <div class="block__2">
+  </div>
+  <div class="block__3">
+  </div>
 </section>
