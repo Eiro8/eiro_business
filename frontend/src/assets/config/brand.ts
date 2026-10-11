@@ -7,7 +7,7 @@ const companyInfo = {
   companyAddress: 'company street, neighbourhood, country',
   companyNumber: '+11 99999-999999',
   companyCNPJ: '777.777.777-77',
-}
+};
 
 // Informações de Compliance
 const complianceInfo = {
@@ -15,7 +15,7 @@ const complianceInfo = {
   supportNumber: '11  77777-7777',
 
   lgpdLink: 'lgpd_link.eiro.tech',
-}
+};
 
 //Redes sociais da empresa
 const socials = {
@@ -23,5 +23,7 @@ const socials = {
   tiktokLink: 'https://tiktok.com/u/eiro',
   facebookLink: 'https://facebook.com/u/eiro',
   twitterLink: 'https://twitter.com/u/eiro',
-  linkedinLink: 'https://linkedin.com/u/eiro'
-}
+  linkedinLink: 'https://linkedin.com/u/eiro',
+};
+
+export { socials, complianceInfo, companyInfo };

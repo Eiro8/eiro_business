@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './navbar/navbar';
+import { Navbar } from './core/layout/navbar/navbar';
+import {companyInfo} from '../assets/config/brand'
 
 @Component({
   imports: [RouterOutlet, Navbar],
@@ -9,11 +10,5 @@ import { Navbar } from './navbar/navbar';
   templateUrl: './app.html',
 })
 export class App {
-  protected title = signal('frontend');
-  papage_title = 'fuckall'
-
-  handleLogoclick(event: any) {
-    this.title = event
-  }
-
+  protected readonly title = companyInfo.companyName;
 }
