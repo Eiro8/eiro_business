@@ -1,12 +1,17 @@
 export interface PageLink {
-  link: string
-  label: string
+  link: string;
+  label: string;
 }
+export const ALL_PAGES: PageLink[] = [
+  { link: "/", label: "pagina inicial" },
+  { link: "/lojas", label: "lojas" },
+  { link: "/sobre", label: "sobre nós" },
+  { link: "/contato", label: "contato" },
+  { link: "/produtos", label: "produtos" },
+];
 
 export const PAGES: PageLink[] = [
-  {link: '/', label: 'pagina inicial'},
-  {link: '/contato', label: 'contato'},
-  {link: '/lojas', label: 'lojas'},
-  {link: '/produtos', label: 'produtos'},
-  {link: '/sobre', label: 'sobre nós'},
-]
+  { link: "/", label: "pagina inicial" },
+  { link: "/lojas", label: "lojas" },
+  { link: "/sobre", label: "sobre nós" },
+];
