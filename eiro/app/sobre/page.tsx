@@ -1,69 +1,55 @@
-import Image from "next/image";
+import { Target, Eye, Award } from "lucide-react";
 
 export default function Sobre() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="flex-1 w-full max-w-5xl mx-auto px-6 py-16 flex flex-col gap-12">
+      <div className="text-center max-w-2xl mx-auto flex flex-col gap-3">
+        <span className="text-xs uppercase tracking-widest font-semibold text-blue-600 dark:text-blue-400">
+          Institucional
+        </span>
+        <h1 className="text-4xl font-bold text-neutral-900 dark:text-white">
+          Sobre a Eiro Tecnologia
+        </h1>
+        <p className="text-neutral-600 dark:text-neutral-300">
+          Pioneirismo em inovação industrial e engenharia tecnológica no Brasil e no mundo.
+        </p>
+      </div>
+
+      <div className="p-8 rounded-2xl bg-white dark:bg-blue-950/40 border border-neutral-200 dark:border-blue-900 shadow-sm leading-relaxed text-neutral-700 dark:text-neutral-200 flex flex-col gap-4">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">Nossa História</h2>
+        <p>
+          Fundada com a missão de conectar processos industriais tradicionais à fronteira digital, a Eiro atua na intersecção entre eletrônica avançada, inteligência de dados e software escalável.
+        </p>
+        <p>
+          Atendemos empresas que necessitam de precisão cirúrgica, disponibilidade contínua e escalabilidade operacional, sempre guiados pela paixão por engenharia de qualidade.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-6 rounded-2xl bg-white dark:bg-blue-950/40 border border-neutral-200 dark:border-blue-900 flex flex-col gap-3">
+          <Target className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Missão</h3>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300">
+            Fornecer tecnologia confiável que impulsione a autonomia e a eficiência dos parques industriais.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="p-6 rounded-2xl bg-white dark:bg-blue-950/40 border border-neutral-200 dark:border-blue-900 flex flex-col gap-3">
+          <Eye className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Visão</h3>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300">
+            Ser referência latino-americana em equipamentos inteligentes e soluções industriais conectadas.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <div className="p-6 rounded-2xl bg-white dark:bg-blue-950/40 border border-neutral-200 dark:border-blue-900 flex flex-col gap-3">
+          <Award className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Valores</h3>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300">
+            Excelência técnica, segurança operacional, inovação ética e foco no sucesso do cliente.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
