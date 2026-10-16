@@ -1,7 +1,3 @@
-# Repositório do site da empresa Eiro
+# Eiro
 
-## Estrutura do projeto
-- frontend
-
-## Copyright
-All rights reserved. Eiro
+frontend do website eirotech.com.br
