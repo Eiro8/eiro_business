@@ -29,7 +29,7 @@ const TertiaryButton = ({ children, ...props }: ButtonProp) => {
   return (
     <button
       {...props}
-      className="flex items-center p-2.5 gap-2 justify-center rounded-sm cursor-pointer transition-all duration-200 ease-in-out shadow  bg-transparent text-white hover:bg-white/5 "
+      className="flex items-center p-2.5 gap-2 justify-center rounded-sm cursor-pointer pointer-events-auto transition-all duration-200 ease-in-out shadow  bg-transparent text-white hover:bg-white/5 "
     >
       {children}
     </button>

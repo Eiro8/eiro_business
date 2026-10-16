@@ -1,7 +1,7 @@
 "use client";
 import { TertiaryButton } from "@/components/ui/primary_button/Button";
 import Link from "next/link";
-import { PageLink, PAGES } from "@/app/config/pages.config";
+import { PageLink, ALL_PAGES } from "@/app/config/pages.config";
 import { Menu, X } from "lucide-react"; // Importamos o ícone X para fechar
 import { useState } from "react";
 
@@ -12,14 +12,14 @@ const MobileMenu = () => {
     <div className="h-fit relative md:invisible md:absolute md:opacity-0">
       {/* BOTÃO TOGGLE (Abre o menu) */}
       <TertiaryButton
-        class="
+        className="
         visible static pointer-events-auto opacity-100
         md:invisible md:absolute md:pointer-events-none md:opacity-0
         "
         onClick={() => setOpen(true)}
         aria-label="Abrir menu"
       >
-        <Menu />
+        <Menu/>
       </TertiaryButton>
 
       {/* MENU ABERTO (Drawer Lateral + Overlay de Fundo) */}
@@ -45,15 +45,16 @@ const MobileMenu = () => {
               <TertiaryButton
                 onClick={() => setOpen(false)}
                 aria-label="Fechar menu"
+
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6class text-black dark:text-white" />
               </TertiaryButton>
               <span className="font-bold text-lg tracking-wider">MENU</span>
             </div>
 
             {/* Lista de links de navegação */}
             <ul className="flex flex-col gap-4 w-full">
-              {PAGES.map((item: PageLink) => {
+              {ALL_PAGES.map((item: PageLink) => {
                 return (
                   <li key={item.label} className="nav_link w-full">
                     <Link

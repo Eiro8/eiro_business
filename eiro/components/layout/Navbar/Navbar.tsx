@@ -1,4 +1,4 @@
-import { ALL_PAGES } from "@/app/config/pages.config";
+import { PAGES } from "@/app/config/pages.config";
 import {
   Button,
   SecondaryButton,
@@ -18,7 +18,6 @@ const Navbar = () => {
       <div className="max-w-7xl w-full">
         <section className="grid grid-cols-3 justify-between items-center box-content gap-2 p-3 pb-1 text-white font-medium">
           <nav className="h-fit p-3 relative">
-
             {/* MENU DESKTOP */}
             <ul
               className="
@@ -27,7 +26,7 @@ const Navbar = () => {
               md:visible md:static md:pointer-events-auto md:opacity-100
               "
             >
-              {ALL_PAGES.map((item) => {
+              {PAGES.map((item) => {
                 return (
                   <li key={item.label} className="nav_link">
                     <Link
@@ -53,10 +52,13 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center justify-end gap-5 text-nowrap">
-            <SecondaryButton>
-              {<Contact width={"24px"} />}
-              <p>Contate-nos</p>
-            </SecondaryButton>
+            <span
+              className="
+              opacity-0 invisible pointer-events-none transition-all duration-300
+            md:opacity-100 md:static md:visible md:pointer-events-auto"
+            >
+              <SecondaryButton>Contate-nos</SecondaryButton>
+            </span>
             <div className="flex">
               <ThemeToggle />
               <ConfigToggle />
