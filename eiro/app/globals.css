@@ -30,3 +30,34 @@ body {
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@utility section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@utility content_container{
+    height: 100%;
+    width:100%;
+    max-width: 1440px;
+    @apply px-5 py-15 box-border
+}
+
+@utility highlight_text {
+    @apply bg-white/20
+}
+@utility highlight_text-blue {
+    @apply bg-blue-800 text-white
+}
+@utility highlight_text-light-blue {
+    @apply bg-blue-500 text-white
+}
+@utility highlight_text-yellow {
+    @apply bg-yellow-400 text-black
+}
+@utility highlight_text-green {
+    @apply bg-green-600 text-black
+}
