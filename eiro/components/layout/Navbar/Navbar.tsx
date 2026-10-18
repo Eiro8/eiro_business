@@ -15,7 +15,7 @@ import MobileMenu from "./components/mobile-menu";
 const Navbar = () => {
   return (
     <header className="flex fixed items-center min-w-5 w-full justify-center box-content p-4 z-40 self-center h-16 shadow-sm shadow-white/7 | bg-blue-950 dark:bg-black">
-      <div className="max-w-7xl w-full">
+      <div className="max-w-7xl w-360">
         <section className="grid grid-cols-3 justify-between items-center box-content gap-2 p-3 pb-1 text-white font-medium">
           <nav className="h-fit p-3 relative">
             {/* MENU DESKTOP */}

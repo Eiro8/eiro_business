@@ -11,7 +11,8 @@ export default function Contato() {
           Entre em Contato com a Eiro
         </h1>
         <p className="text-neutral-600 dark:text-neutral-300">
-          Converse com nossos engenheiros e consultores para desenhar a solução ideal para sua operação.
+          Converse com nossos engenheiros e consultores para desenhar a solução
+          ideal para sua operação.
         </p>
       </div>
 
@@ -19,7 +20,9 @@ export default function Contato() {
         {/* Informações de Contato */}
         <div className="flex flex-col gap-6">
           <div className="p-6 rounded-2xl bg-white dark:bg-blue-950/40 border border-neutral-200 dark:border-blue-900 flex flex-col gap-4">
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Canais Oficiais</h3>
+            <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
+              Canais Oficiais
+            </h3>
             <div className="flex flex-col gap-4 text-sm text-neutral-600 dark:text-neutral-300">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -31,7 +34,10 @@ export default function Contato() {
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span>Segunda a Sexta: 08h às 18h (Plantão 24/7 p/ clientes industriais)</span>
+                <span>
+                  Segunda a Sexta: 08h às 18h (Plantão 24/7 p/ clientes
+                  industriais)
+                </span>
               </div>
             </div>
           </div>
