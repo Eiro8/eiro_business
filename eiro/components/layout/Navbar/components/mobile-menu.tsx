@@ -2,8 +2,10 @@
 import { TertiaryButton } from "@/components/ui/primary_button/Button";
 import Link from "next/link";
 import { PageLink, ALL_PAGES } from "@/app/config/pages.config";
+import REDES_SOCIAIS, { Socials } from "@/app/config/socials.config";
 import { Menu, X } from "lucide-react"; // Importamos o ícone X para fechar
 import { useState } from "react";
+import Image from "next/image";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +21,7 @@ const MobileMenu = () => {
         onClick={() => setOpen(true)}
         aria-label="Abrir menu"
       >
-        <Menu/>
+        <Menu />
       </TertiaryButton>
 
       {/* MENU ABERTO (Drawer Lateral + Overlay de Fundo) */}
@@ -45,7 +47,6 @@ const MobileMenu = () => {
               <TertiaryButton
                 onClick={() => setOpen(false)}
                 aria-label="Fechar menu"
-
               >
                 <X className="w-6 h-6class text-black dark:text-white" />
               </TertiaryButton>
@@ -53,19 +54,26 @@ const MobileMenu = () => {
             </div>
 
             {/* Lista de links de navegação */}
-            <ul className="flex flex-col gap-4 w-full">
+            <ul className="flex flex-col gap-4 w-full overflow-hidden">
               {ALL_PAGES.map((item: PageLink) => {
                 return (
                   <li key={item.label} className="nav_link w-full">
                     <Link
                       href={item.link}
                       onClick={() => setOpen(false)} // Fecha o menu ao clicar no link
-                      className="
+                      className={`
                         flex text-nowrap text-xl py-2 px-3 rounded-lg
                         font-medium justify-start w-full
                         hover:bg-neutral-100 dark:hover:bg-blue-900
                         transition-colors duration-150
-                      "
+                        relative
+
+                        after:content-['>']
+                        after:h-5 after:w-5 after:absolute
+                        after:-right-20 after:opacity-0
+                        after:transition-all after:duration-300
+                        hover:after:right-0 hover:after:opacity-100
+                      `}
                     >
                       {item.label.toUpperCase()}
                     </Link>
@@ -75,8 +83,32 @@ const MobileMenu = () => {
             </ul>
 
             {/* Rodapé do menu */}
-            <div className="mt-auto pt-4 border-t border-neutral-200 dark:border-blue-900 w-full text-center text-xs opacity-75">
-              EIRO
+            <div
+              className="
+              mt-auto pt-4 border-t border-neutral-200
+              dark:border-blue-900 w-full text-center text-xs opacity-75
+              flex justify-center gap-10
+              "
+            >
+              {REDES_SOCIAIS.map((social: Socials) => {
+                const icon = social.icon as string
+                return (
+                  <a
+                    key={social.platform}
+                    href={social.link}
+                    rel="noopener noreferrer"
+                    title={social.platform}
+                    aria-label={`Acessar ${social.platform}`}
+                  >
+                    <Image
+                      src={icon}
+                      alt={social.platform}
+                      width={24}
+                      height={24}
+                    />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </>
