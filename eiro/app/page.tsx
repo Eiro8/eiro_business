@@ -21,7 +21,8 @@ export default function Home() {
         className="section bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${Hero.src})`,
-        }}>
+        }}
+      >
         <div
           className="content_container md:h-150
            grid md:grid-cols-[50%_auto] gap-10"
@@ -48,9 +49,10 @@ export default function Home() {
           <h2 className="text-4xl font-bold underline mb-6">
             Motivos para nos escolher
           </h2>
-          <div className="flex flex-col lg:grid lg:grid-cols-[60%_40%] lg:h-70 p-4 gap-4">
-            <div
-              className="flex flex-col p-4 gap-2
+          <div className="grid grid-rows-2 h-full max-h-250 lg:content-center">
+            <div className="flex flex-col lg:grid lg:grid-cols-[60%_40%] p-4  gap-4">
+              <div
+                className="flex flex-col p-4 gap-2
               rounded-2xl relative
               before:absolute before:content-['']
               bg-white dark:bg-black
@@ -61,21 +63,21 @@ export default function Home() {
               before:inset-0 before:rounded-[inherit]
               before:-translate-x-2 before:-translate-y-2
               before:pointer-events-none"
-            >
-              <h3 className="text-2xl font-bold">
-                100% Testado Antes do Envio
-              </h3>
-              <p className="font-semibold">
-                Não trabalhamos com sorte. Cada dispositivo passa por um teste
-                rigoroso de funcionamento antes de sair do nosso estoque,
-                garantindo que você receba{" "}
-                <span className="highlight_text-yellow">
-                  tudo pronto para usar.
-                </span>
-              </p>
-            </div>
-            <div
-              className="flex flex-col p-4 gap-2
+              >
+                <h3 className="text-2xl font-bold">
+                  100% Testado Antes do Envio
+                </h3>
+                <p className="font-semibold">
+                  Não trabalhamos com sorte. Cada dispositivo passa por um teste
+                  rigoroso de funcionamento antes de sair do nosso estoque,
+                  garantindo que você receba{" "}
+                  <span className="highlight_text-yellow">
+                    tudo pronto para usar.
+                  </span>
+                </p>
+              </div>
+              <div
+                className="flex flex-col p-4 gap-2
               rounded-2xl relative
               before:absolute before:content-['']
               bg-white dark:bg-black
@@ -87,23 +89,22 @@ export default function Home() {
               before:-translate-x-2 before:-translate-y-2
               before:pointer-events-none
               "
-            >
-              <h3 className="text-2xl font-bold">
-                Embalagem com Proteção Máxima
-              </h3>
-              <p className="font-semibold">
-                Tratamos a tecnologia com o cuidado que ela merece. Seus
-                produtos são embalados com proteção reforçada contra impactos,
-                garantindo{" "}
-                <span className="highlight_text-yellow">
-                  integridade total durante o transporte.
-                </span>
-              </p>
+              >
+                <h3 className="text-2xl font-bold">
+                  Embalagem com Proteção Máxima
+                </h3>
+                <p className="font-semibold">
+                  Tratamos a tecnologia com o cuidado que ela merece. Seus
+                  produtos são embalados com proteção reforçada contra impactos,
+                  garantindo{" "}
+                  <span className="highlight_text-yellow">
+                    integridade total durante o transporte.
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col lg:grid lg:grid-cols-[30%_70%] lg:h-70 p-4 gap-4">
-            <div
-              className="flex flex-col p-4 gap-2
+            <div className="flex flex-col lg:grid lg:grid-cols-[30%_70%] p-4 gap-4">
+              <div className="flex flex-col p-4 gap-2
               rounded-2xl relative
               before:absolute before:content-['']
               bg-white dark:bg-black
@@ -115,19 +116,19 @@ export default function Home() {
               before:-translate-x-2 before:-translate-y-2
               before:pointer-events-none
               "
-            >
-              <h3 className="text-2xl font-bold">Compra Sem Surpresas</h3>
-              <p className="font-semibold">
-                Unimos controle de qualidade estrito a um atendimento
-                transparente. Você tem a tranquilidade de saber exatamente o que
-                está comprando e a{" "}
-                <span className="highlight_text-yellow">
-                  certeza de receber um produto perfeito.
-                </span>
-              </p>
-            </div>
-            <div
-              className="flex flex-col p-4 gap-2
+              >
+                <h3 className="text-2xl font-bold">Compra Sem Surpresas</h3>
+                <p className="font-semibold">
+                  Unimos controle de qualidade estrito a um atendimento
+                  transparente. Você tem a tranquilidade de saber exatamente o
+                  que está comprando e a{" "}
+                  <span className="highlight_text-yellow">
+                    certeza de receber um produto perfeito.
+                  </span>
+                </p>
+              </div>
+              <div
+                className="flex flex-col p-4 gap-2
               rounded-2xl relative
               before:absolute before:content-['']
               bg-white dark:bg-black
@@ -139,16 +140,17 @@ export default function Home() {
               before:-translate-x-2 before:-translate-y-2
               before:pointer-events-none
               "
-            >
-              <h3 className="text-2xl font-bold">Agilidade no Envio</h3>
-              <p className="font-semibold">
-                Sabemos que quem compra tecnologia tem pressa. Nosso processo de
-                conferência, embalagem e despache é otimizado para que seu
-                pedido chegue o{" "}
-                <span className="highlight_text-yellow">
-                  mais rápido possível.
-                </span>
-              </p>
+              >
+                <h3 className="text-2xl font-bold">Agilidade no Envio</h3>
+                <p className="font-semibold">
+                  Sabemos que quem compra tecnologia tem pressa. Nosso processo
+                  de conferência, embalagem e despache é otimizado para que seu
+                  pedido chegue o{" "}
+                  <span className="highlight_text-yellow">
+                    mais rápido possível.
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -159,7 +161,8 @@ export default function Home() {
           <div
             className="flex flex-col relative p-6 box-border
             justify-start text-center md:max-w-[600px] max-h-[300px]
-            items-center rounded-4xl overflow-hidden">
+            items-center rounded-4xl overflow-hidden"
+          >
             <Image
               src={contact_bg.src}
               alt=""
@@ -170,20 +173,25 @@ export default function Home() {
             />
             <h2 className="font-bold text-2xl mt-10">Fale Conosco</h2>
             <span className="font-semibold max-w-100">
-              Seja para pedir ajuda, escolher a tecnologia certa ou acompanhar o seu pedido,
-              você será escutado.
+              Seja para pedir ajuda, escolher a tecnologia certa ou acompanhar o
+              seu pedido, você será escutado.
             </span>
             <span className="flex items-center gap-4 mt-8">
               {REDES_SOCIAIS.map((social: Socials) => {
-                const Icon: IconType = social.icon as IconType
+                const Icon: IconType = social.icon as IconType;
                 return (
                   <a
                     href={social.link}
                     key={social.platform}
                     rel="noopener noreferrer"
                     target="_blank"
-                    aria-label={`Acessar o ${social.platform} da EIRO`}>
-                    <Icon size={24} title={social.platform} className="fill-white hover:fill-blue-700 duration-300 transition-colors"/>
+                    aria-label={`Acessar o ${social.platform} da EIRO`}
+                  >
+                    <Icon
+                      size={24}
+                      title={social.platform}
+                      className="fill-white hover:fill-blue-700 duration-300 transition-colors"
+                    />
                   </a>
                 );
               })}

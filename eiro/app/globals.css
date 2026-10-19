@@ -44,9 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
     flex-grow: 1;
-
 }
 
 @utility content_container{
