@@ -9,7 +9,7 @@ const BRAND_INFO = {
 const CONTACT_INFO = {
   email: "contact@eiro.com.br",
   tel: "12345-6789",
-  availability: "9:00 - 18:00 (UTC-3, São Paulo) ",
+  availability: "9:00 - 18:00 (UTC-3, São Paulo) de segunda a sábado.",
 };
 
 export { CONTACT_INFO, BRAND_INFO };

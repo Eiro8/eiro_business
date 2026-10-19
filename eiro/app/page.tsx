@@ -7,22 +7,21 @@ import { CONTACT_INFO } from "./config/brand.config";
 import { ArrowRight, Clock, Copy, Mail, PhoneCall } from "lucide-react";
 import { Form } from "./components/page/form.component";
 import CopyButton from "./components/CopyButton.component";
-import contact_bg from '@/public/images/centered_lines.png'
+import contact_bg from "@/public/images/centered_lines.png";
 import Image from "next/image";
 import REDES_SOCIAIS, { Socials } from "./config/socials.config";
+import { IconType } from "react-icons";
 
 export default function Home() {
   return (
-    <main className="max-w-full w-full flex flex-col justify-center mt-24">
+    <main className="w-full flex flex-col pt-24 grow">
       {/* HERO */}
       <section
         id="hero"
-        className="section bg-cover bg-center bg-no-repeat
-        "
+        className="section bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${Hero.src})`,
-        }}
-      >
+        }}>
         <div
           className="content_container md:h-150
            grid md:grid-cols-[50%_auto] gap-10"
@@ -40,9 +39,10 @@ export default function Home() {
           </span>
         </div>
       </section>
-      {/*PRODUTOS */}
       {/*TODO: ADICIONAR PRODUTOS AQUI */}
+
       {/* WHY US */}
+
       <section id="porque_nos_escolher" className="section">
         <div className="content_container">
           <h2 className="text-4xl font-bold underline mb-6">
@@ -155,30 +155,45 @@ export default function Home() {
       </section>
       {/* CONTATO */}
       <section id="contato" className="section">
-        <div className="p-5 flex flex-col md:flex-row gap-5">
-          <div className="flex flex-col relative p-6 box-border justify-start text-center items-center rounded-4xl overflow-hidden">
-            <Image src={contact_bg.src} alt="" preload={true} className="absolute w-full h-full object-cover object-center -z-10 rounded-[inherit]" width={400} height={300} />
+        <div className="p-5 flex flex-col gap-5 md:flex-row">
+          <div
+            className="flex flex-col relative p-6 box-border
+            justify-start text-center md:max-w-[600px] max-h-[300px]
+            items-center rounded-4xl overflow-hidden">
+            <Image
+              src={contact_bg.src}
+              alt=""
+              preload={true}
+              className="absolute w-full h-full object-cover object-center -z-10 rounded-[inherit]"
+              width={400}
+              height={300}
+            />
             <h2 className="font-bold text-2xl mt-10">Fale Conosco</h2>
-            <span className="font-semibold max-w-3/6">
-              Seja para escolher a tecnologia certa ou acompanhar o seu pedido,
-              nossa equipe está pronta para responder com rapidez, transparência
-              e eficiência
+            <span className="font-semibold max-w-100">
+              Seja para pedir ajuda, escolher a tecnologia certa ou acompanhar o seu pedido,
+              você será escutado.
             </span>
-            <span className="flex items-center gap-2 ">
-              {REDES_SOCIAIS.map((social:Socials) => {
+            <span className="flex items-center gap-4 mt-8">
+              {REDES_SOCIAIS.map((social: Socials) => {
+                const Icon: IconType = social.icon as IconType
                 return (
-                  <a href={social.link} key={social.platform} rel="noopener noreferrer" target="_blank" className="text-black dark:text-white">
-                    <Image src={social.icon} alt={social.platform} aria-label={social.platform}/>
+                  <a
+                    href={social.link}
+                    key={social.platform}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={`Acessar o ${social.platform} da EIRO`}>
+                    <Icon size={24} title={social.platform} className="fill-white hover:fill-blue-700 duration-300 transition-colors"/>
                   </a>
-                )
+                );
               })}
             </span>
           </div>
-          <div className="flex flex-col gap-5 p-5 items-center">
-            <div className="grid grid-cols-[40px_200px_40px] gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center w-fit rounded-3xl">
+          <div className="flex flex-col gap-5 p-5 items-center grow w-full md:w-fit">
+            <div className="grid grid-cols-[minmax(20px,40px)_auto_minmax(20px,40px)] md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
               <Mail />
               <span>
-                <h4 className="font-bold text-lg">E-mail da Empresa</h4>
+                <h4 className="font-bold text-lg">E-mail</h4>
                 <span className="flex items-center gap-2">
                   <p className="font-light" id="email">
                     {CONTACT_INFO.email}
@@ -195,10 +210,10 @@ export default function Home() {
                 <ArrowRight className="duration-300 transition-all hover:text-blue-700" />
               </a>
             </div>
-            <div className="grid grid-cols-[40px_200px_40px] gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 p-5 items-center w-fit rounded-3xl">
+            <div className="grid grid-cols-[40px_auto_40px] md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
               <PhoneCall />
               <span>
-                <h4 className="font-bold text-lg">Telefone da Empresa</h4>
+                <h4 className="font-bold text-lg">Telefone</h4>
                 <span className="flex items-center gap-1">
                   <p className="font-light" id="telephone">
                     {CONTACT_INFO.tel}
@@ -214,8 +229,11 @@ export default function Home() {
                 <ArrowRight className="duration-300 transition-all hover:text-blue-700" />
               </a>
             </div>
-            <div className="flex gap-2">
-              <Clock />
+            <div className="flex flex-col gap-2 text-center">
+              <span className="flex gap-2 justify-center">
+                <Clock />
+                <h3 className="font-bold">Horário de atendimento</h3>
+              </span>
               <p>{CONTACT_INFO.availability}</p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 "use client";
-import { TertiaryButton } from "@/components/ui/primary_button/Button";
+import { Button, SecondaryButton, TertiaryButton } from "@/components/ui/primary_button/Button";
 import { CopyCheck, CopyIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -16,19 +16,19 @@ const CopyButton = ({ id }: CopyButton) => {
     try {
       navigator.clipboard.writeText(text);
       setClicked(true);
-      toast.success("copiado")
+      toast.success("Texto Copiado")
       setTimeout(() => {
         setClicked(false);
-      }, 2000);
+      }, 3000);
     } catch (err) {
       console.error("Houve um erro ao copiar o texto", err);
     }
   };
 
   return (
-    <TertiaryButton onClick={() => Copy()}>
-      {clicked ? <CopyCheck width={20}/> : <CopyIcon width={20} />}
-    </TertiaryButton>
+    <button className="p-1 flex hover:black/30 hover:cursor-pointer rounded-full hover:bg-blue-500/40 transition-all duration-300" onClick={() => Copy()} aria-label="Clique para copiar">
+      {clicked ? <CopyCheck  width={15} height={15} className="text-black dark:text-white"/> : <CopyIcon width={15} height={15} className="text-black dark:text-white" />}
+    </button>
   );
 };
 

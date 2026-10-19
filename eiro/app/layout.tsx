@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head></head>
-      <body className="flex flex-col h-full items-center">
+      <body className="flex flex-col grow min-h-screen bg-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
