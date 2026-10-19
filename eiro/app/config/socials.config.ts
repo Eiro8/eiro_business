@@ -5,7 +5,7 @@ import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa6";
 
 export type platform = "instagram" | "tiktok" | "x" | "youtube" | "whatsapp";
 export interface Socials {
-  icon?: IconType;
+  icon?: IconType | string;
   platform: platform;
   link: string;
 }

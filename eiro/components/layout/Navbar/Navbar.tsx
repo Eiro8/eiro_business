@@ -13,6 +13,7 @@ import { ConfigToggle } from "./components/config-toggle";
 import MobileMenu from "./components/mobile-menu";
 
 const Navbar = () => {
+
   return (
     <header className="flex fixed items-center justify-center box-content py-4 z-40 self-center h-16 shadow-sm shadow-white/7 w-full bg-blue-950 dark:bg-black">
       <div className="max-w-screen md:max-w-7xl">

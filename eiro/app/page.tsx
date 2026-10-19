@@ -5,7 +5,6 @@ import {
 import Hero from "@/public/images/wavy_lines.png";
 import { CONTACT_INFO } from "./config/brand.config";
 import { ArrowRight, Clock, Copy, Mail, PhoneCall } from "lucide-react";
-import { Form } from "./components/page/form.component";
 import CopyButton from "./components/CopyButton.component";
 import contact_bg from "@/public/images/centered_lines.png";
 import Image from "next/image";
@@ -41,9 +40,7 @@ export default function Home() {
         </div>
       </section>
       {/*TODO: ADICIONAR PRODUTOS AQUI */}
-
       {/* WHY US */}
-
       <section id="porque_nos_escolher" className="section">
         <div className="content_container">
           <h2 className="text-4xl font-bold underline mb-6">
@@ -104,7 +101,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-[30%_70%] p-4 gap-4">
-              <div className="flex flex-col p-4 gap-2
+              <div
+                className="flex flex-col p-4 gap-2
               rounded-2xl relative
               before:absolute before:content-['']
               bg-white dark:bg-black
@@ -157,20 +155,21 @@ export default function Home() {
       </section>
       {/* CONTATO */}
       <section id="contato" className="section">
-        <div className="p-5 flex flex-col gap-5 md:flex-row">
+        <div
+          className="md:grid md:grid-cols-[50%_50%]
+          h-full md:h-[500px] gap-5 p-5 flex flex-col
+          "
+        >
           <div
             className="flex flex-col relative p-6 box-border
-            justify-start text-center md:max-w-[600px] max-h-[300px]
-            items-center rounded-4xl overflow-hidden"
+            justify-start text-center
+            items-center rounded-4xl overflow-hidden
+            bg-cover bg-center bg-no-repeat
+            "
+            style={{
+              backgroundImage: `url(${contact_bg.src})`,
+            }}
           >
-            <Image
-              src={contact_bg.src}
-              alt=""
-              preload={true}
-              className="absolute w-full h-full object-cover object-center -z-10 rounded-[inherit]"
-              width={400}
-              height={300}
-            />
             <h2 className="font-bold text-2xl mt-10">Fale Conosco</h2>
             <span className="font-semibold max-w-100">
               Seja para pedir ajuda, escolher a tecnologia certa ou acompanhar o
@@ -198,7 +197,7 @@ export default function Home() {
             </span>
           </div>
           <div className="flex flex-col gap-5 p-5 items-center grow w-full md:w-fit">
-            <div className="grid grid-cols-[minmax(20px,40px)_auto_minmax(20px,40px)] md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
+            <div className="grid grid-cols-[minmax(20px,40px)_auto_minmax(20px,40px)] grow md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
               <Mail />
               <span>
                 <h4 className="font-bold text-lg">E-mail</h4>
@@ -218,7 +217,7 @@ export default function Home() {
                 <ArrowRight className="duration-300 transition-all hover:text-blue-700" />
               </a>
             </div>
-            <div className="grid grid-cols-[40px_auto_40px] md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
+            <div className="grid grid-cols-[40px_auto_40px] md:grid-cols-[40px_200px_20px] grow w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
               <PhoneCall />
               <span>
                 <h4 className="font-bold text-lg">Telefone</h4>

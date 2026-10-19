@@ -91,6 +91,7 @@ const MobileMenu = () => {
               "
             >
               {REDES_SOCIAIS.map((social: Socials) => {
+                const icon = social.icon as string
                 return (
                   <a
                     key={social.platform}
@@ -100,7 +101,7 @@ const MobileMenu = () => {
                     aria-label={`Acessar ${social.platform}`}
                   >
                     <Image
-                      src={social.icon}
+                      src={icon}
                       alt={social.platform}
                       width={24}
                       height={24}
