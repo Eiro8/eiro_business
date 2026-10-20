@@ -20,8 +20,7 @@ export default function Home() {
           sizes="100vw"
           priority
           fill
-          className="z-0 absolute"
-        />
+          className="z-0 absolute"/>
         <div
           className="content_container md:h-150
            grid md:grid-cols-[50%_auto] gap-10 z-10"
@@ -31,7 +30,7 @@ export default function Home() {
             <span className="highlight_text">segurança.</span>
           </h1>
           <span className="flex flex-col items-center md:items-start gap-4 h-fit md:justify-self-end">
-            <p className="text-lg text-white text-wrap md:max-w-80">
+            <p className="text-lg text-white text-wrap md:max-w-80 text-center md:text-start">
               Testamos cada dispositivo, embalamos com cuidado e entregamos com
               agilidade. Com a gente, você recebe inovação com segurança total.
             </p>
