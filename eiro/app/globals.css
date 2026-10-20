@@ -28,7 +28,6 @@ html,body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
-    scroll-behavior: smooth;
 }
 body {
   background-color: var(--background);
