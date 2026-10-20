@@ -1,7 +1,4 @@
-import {
-  SecondaryButton,
-  TertiaryButton,
-} from "@/components/ui/primary_button/Button";
+import {SecondaryButton} from "@/components/ui/primary_button/Button";
 import Hero from "@/public/images/wavy_lines.png";
 import { CONTACT_INFO } from "./config/brand.config";
 import { ArrowRight, Clock, Mail, PhoneCall } from "lucide-react";
@@ -28,7 +25,7 @@ export default function Home() {
           className="content_container md:h-150
            grid md:grid-cols-[50%_auto] gap-10 z-10"
         >
-          <h1 className="text-3xl md:text-7xl h-fit md:leading-19 font-bold self-start content-center">
+          <h1 className="text-3xl md:text-7xl h-fit md:leading-19 font-bold self-start content-center text-white">
             Tecnologia testada, entregue com{" "}
             <span className="highlight_text">segurança.</span>
           </h1>
@@ -44,7 +41,7 @@ export default function Home() {
       {/*TODO: ADICIONAR PRODUTOS AQUI */}
       {/* WHY US */}
       <section id="porque_nos_escolher" className="section">
-        <div className="content_container">
+        <div className="content_container text-black dark:text-white">
           <h2 className="text-4xl font-bold underline mb-6">
             Motivos para nos escolher
           </h2>
@@ -52,7 +49,7 @@ export default function Home() {
             {/* PRIMEIRA LINHA DO GRID */}
             <div className="flex flex-col lg:grid lg:grid-cols-[60%_40%] p-4 gap-4">
               {/* CARD 1: 100% Testado Antes do Envio */}
-              <div className="bg-black dark:bg-white rounded-2xl h-full">
+              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -76,7 +73,7 @@ export default function Home() {
               </div>
 
               {/* CARD 2: Embalagem com Proteção Máxima */}
-              <div className="bg-black dark:bg-white rounded-2xl h-full">
+              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -103,7 +100,7 @@ export default function Home() {
             {/* SEGUNDA LINHA DO GRID */}
             <div className="flex flex-col lg:grid lg:grid-cols-[30%_70%] p-4 gap-4">
               {/* CARD 3: Compra Sem Surpresas */}
-              <div className="bg-black dark:bg-white rounded-2xl h-full">
+              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -125,7 +122,7 @@ export default function Home() {
               </div>
 
               {/* CARD 4: Agilidade no Envio */}
-              <div className="bg-black dark:bg-white rounded-2xl h-full">
+              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -152,13 +149,8 @@ export default function Home() {
       {/* CONTATO */}
       <section id="contato" className="section">
         <div
-          className="md:grid md:grid-cols-[50%_50%]
-          h-full md:h-[500px] gap-5 p-5 flex flex-col
-          "
-        >
-          <div
-            className="flex flex-col relative p-6 box-border w-full h-full rounded-2xl overflow-hidden"
-          >
+          className="md:grid md:grid-cols-[60%_40%] max-w-360 w-full h-full md:h-[500px] gap-3 p-5 flex flex-col">
+          <div className="flex flex-col relative p-6 box-border w-full h-full rounded-2xl overflow-hidden">
             <Image
               src={contact_bg.src}
               alt="Background"
@@ -167,13 +159,13 @@ export default function Home() {
               fill
               className="z-0 absolute"
             />
-            <div className="z-10 flex flex-col w-full h-full text-center items-center">
-              <h2 className="font-bold text-2xl mt-10">Fale Conosco</h2>
-              <span className="font-semibold max-w-100">
+            <div className="z-10 flex flex-col w-full h-full text-center items-center text-white gap-5">
+              <h2 className="font-bold text-[2rem] mt-10">Fale Conosco</h2>
+              <span className="font-semibold leading-6 md:max-w-100 w-full text-[1.4rem]">
                 Seja para pedir ajuda, escolher a tecnologia certa ou acompanhar
-                o seu pedido, você será escutado.
+                o seu pedido, você será escutado. Conte conosco.
               </span>
-              <span className="flex items-center gap-4 mt-8">
+              <span className="flex items-center gap-4 mt-15">
                 {REDES_SOCIAIS.map((social: Socials) => {
                   const Icon: IconType = social.icon as IconType;
                   return (
@@ -195,10 +187,12 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-5 p-5 items-center grow w-full md:w-fit">
-            <div className="grid grid-cols-[minmax(20px,40px)_auto_minmax(20px,40px)] grow md:grid-cols-[40px_200px_20px] w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
+          <div className="flex flex-col p-5 gap-5 items-center grow justify-center text-black dark:text-white">
+            <div className="flex items-center w-full gap-3
+              shadow shadow-black dark:shadow-white hover:shadow-blue-600
+              duration-300 hover:cursor-pointer p-5 rounded-3xl">
               <Mail />
-              <span>
+              <span className="w-full">
                 <h4 className="font-bold text-lg">E-mail</h4>
                 <span className="flex items-center gap-2">
                   <p className="font-light" id="email">
@@ -211,14 +205,15 @@ export default function Home() {
                 href={`mailto:${CONTACT_INFO.email}`}
                 rel="noopener noreferrer"
                 aria-label="Entrar em contato via e-mail"
-                className="hover:fill-blue-500"
-              >
+                className="hover:fill-blue-500">
                 <ArrowRight className="duration-300 transition-all hover:text-blue-700" />
               </a>
             </div>
-            <div className="grid grid-cols-[40px_auto_40px] md:grid-cols-[40px_200px_20px] grow w-full md:w-fit gap-2 shadow shadow-black dark:shadow-white hover:shadow-blue-600 duration-300 hover:cursor-pointer p-5 items-center rounded-3xl">
+            <div className="flex items-center w-full gap-3
+              shadow shadow-black dark:shadow-white hover:shadow-blue-600
+              duration-300 hover:cursor-pointer p-5 rounded-3xl">
               <PhoneCall />
-              <span>
+              <span className="w-full">
                 <h4 className="font-bold text-lg">Telefone</h4>
                 <span className="flex items-center gap-1">
                   <p className="font-light" id="telephone">
