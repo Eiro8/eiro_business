@@ -7,6 +7,7 @@ import contact_bg from "@/public/images/centered_lines.png";
 import Image from "next/image";
 import REDES_SOCIAIS, { Socials } from "./config/socials.config";
 import { IconType } from "react-icons";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -34,7 +35,9 @@ export default function Home() {
               Testamos cada dispositivo, embalamos com cuidado e entregamos com
               agilidade. Com a gente, você recebe inovação com segurança total.
             </p>
-            <SecondaryButton>Saiba mais</SecondaryButton>
+            <Link href={"/sobre"} aria-label="Visualizar a página sobre nós" className="
+              text-white font-semibold p-2 border-white border-2 rounded-md bg-transparent hover:bg-white hover:text-black duration-300 transition-colors
+              ">Saiba Mais</Link>
           </span>
         </div>
       </section>
@@ -49,7 +52,7 @@ export default function Home() {
             {/* PRIMEIRA LINHA DO GRID */}
             <div className="flex flex-col lg:grid lg:grid-cols-[60%_40%] p-4 gap-4">
               {/* CARD 1: 100% Testado Antes do Envio */}
-              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
+              <div className="bg-black dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -65,7 +68,7 @@ export default function Home() {
                     Não trabalhamos com sorte. Cada dispositivo passa por um
                     teste rigoroso de funcionamento antes de sair do nosso
                     estoque, garantindo que você receba{" "}
-                    <span className="highlight_text-yellow">
+                    <span className="highlight_text-blue">
                       tudo pronto para usar.
                     </span>
                   </p>
@@ -73,7 +76,7 @@ export default function Home() {
               </div>
 
               {/* CARD 2: Embalagem com Proteção Máxima */}
-              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
+              <div className="bg-black dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -89,7 +92,7 @@ export default function Home() {
                     Tratamos a tecnologia com o cuidado que ela merece. Seus
                     produtos são embalados com proteção reforçada contra
                     impactos, garantindo{" "}
-                    <span className="highlight_text-yellow">
+                    <span className="highlight_text-blue">
                       integridade total durante o transporte.
                     </span>
                   </p>
@@ -100,7 +103,7 @@ export default function Home() {
             {/* SEGUNDA LINHA DO GRID */}
             <div className="flex flex-col lg:grid lg:grid-cols-[30%_70%] p-4 gap-4">
               {/* CARD 3: Compra Sem Surpresas */}
-              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
+              <div className="bg-black dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -114,7 +117,7 @@ export default function Home() {
                     Unimos controle de qualidade estrito a um atendimento
                     transparente. Você tem a tranquilidade de saber exatamente o
                     que está comprando e a{" "}
-                    <span className="highlight_text-yellow">
+                    <span className="highlight_text-blue">
                       certeza de receber um produto perfeito.
                     </span>
                   </p>
@@ -122,7 +125,7 @@ export default function Home() {
               </div>
 
               {/* CARD 4: Agilidade no Envio */}
-              <div className="bg-blue-900 dark:bg-white rounded-2xl h-full">
+              <div className="bg-black dark:bg-white rounded-2xl h-full">
                 <div
                   className="flex flex-col p-4 gap-2 h-full
                   rounded-[inherit] relative
@@ -136,7 +139,7 @@ export default function Home() {
                     Sabemos que quem compra tecnologia tem pressa. Nosso
                     processo de conferência, embalagem e despache é otimizado
                     para que seu pedido chegue o{" "}
-                    <span className="highlight_text-yellow">
+                    <span className="highlight_text-blue">
                       mais rápido possível.
                     </span>
                   </p>
