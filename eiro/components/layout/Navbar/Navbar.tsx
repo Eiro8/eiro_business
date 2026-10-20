@@ -11,6 +11,7 @@ import logo from "@/public/images/eiro_white_no_background.png";
 import { ThemeToggle } from "./components/theme-toggle";
 import { ConfigToggle } from "./components/config-toggle";
 import MobileMenu from "./components/mobile-menu";
+import LinkComponent from "@/app/components/shared/Link.component";
 
 const Navbar = () => {
 
@@ -58,7 +59,7 @@ const Navbar = () => {
               opacity-0 invisible pointer-events-none transition-all duration-300
             md:opacity-100 md:static md:visible md:pointer-events-auto"
             >
-              <SecondaryButton>Contate-nos</SecondaryButton>
+              <LinkComponent link="/#contato">Contate-nos</LinkComponent>
             </span>
             <div className="flex">
               <ThemeToggle />

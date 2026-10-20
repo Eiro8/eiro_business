@@ -4,11 +4,19 @@ import Link from "next/link";
 import { PageLink, ALL_PAGES } from "@/app/config/pages.config";
 import REDES_SOCIAIS, { Socials } from "@/app/config/socials.config";
 import { Menu, X } from "lucide-react"; // Importamos o ícone X para fechar
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
 
   return (
     <div className="h-fit relative md:invisible md:absolute md:opacity-0">
@@ -54,7 +62,7 @@ const MobileMenu = () => {
             </div>
 
             {/* Lista de links de navegação */}
-            <ul className="flex flex-col gap-4 w-full overflow-hidden">
+            <ul className="flex flex-col gap-4 w-full overflow-y-scroll overflow-x-hidden px-2">
               {ALL_PAGES.map((item: PageLink) => {
                 return (
                   <li key={item.label} className="nav_link w-full">
@@ -91,7 +99,7 @@ const MobileMenu = () => {
               "
             >
               {REDES_SOCIAIS.map((social: Socials) => {
-                const icon = social.icon as string
+                const icon = social.icon as string;
                 return (
                   <a
                     key={social.platform}

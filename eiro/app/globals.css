@@ -58,7 +58,7 @@ body {
     @apply bg-white/20
 }
 @utility highlight_text-blue {
-    @apply bg-blue-800 text-white
+    @apply bg-blue-950 text-white
 }
 @utility highlight_text-light-blue {
     @apply bg-blue-500 text-white
