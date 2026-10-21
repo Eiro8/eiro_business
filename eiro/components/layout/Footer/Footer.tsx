@@ -16,10 +16,12 @@ const Footer = () => {
               {BRAND_INFO.slogan}.
             </span>
           </div>
-          <h3 className="text-4xl font-extrabold max-w-3/6 md:text-start">Chega de surpresas, escolha EIRO.</h3>
+          <h3 className="text-4xl font-extrabold max-w-3/6 md:text-start">
+            Chega de surpresas, escolha EIRO.
+          </h3>
         </section>
         <div className="gap-20 p-5 flex flex-col md:flex-row">
-          <nav className="flex flex-col gap-4 items-center">
+          <nav className="flex flex-col gap-4 items-start">
             <h3 className="border-b border-gray-400 text-gray-400">PAGINAS</h3>
             <ul className="flex flex-col gap-3  text-gray-300 items-center md:items-start">
               {ALL_PAGES.map((page: PageLink) => (
@@ -28,21 +30,21 @@ const Footer = () => {
                     className="text-md font-normal hover:text-white duration-300 transition-all"
                     href={page.link}
                   >
-                    {page.label}
+                    {page.label.toUpperCase()}.
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
           <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="border-b border-white">CONTATO</h3>
+            <h3 className="border-b border-white text-gray-400">CONTATO</h3>
             <span className="flex flex-col items-center md:items-start gap-3">
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
                 rel="noopener noreferrer"
                 className="flex items-center gap-1"
               >
-                <Mail height={20}/>
+                <Mail height={20} />
                 {CONTACT_INFO.email}
               </a>{" "}
               <a
@@ -50,7 +52,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex gap-1 items-center"
               >
-                <Phone height={20}/> {CONTACT_INFO.tel}
+                <Phone height={20} /> {CONTACT_INFO.tel}
               </a>
             </span>
           </div>

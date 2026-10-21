@@ -2,42 +2,49 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  :root {
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --card-border: rgba(226, 232, 240, 0.8);
-    --accent-emerald: #059669;
-    --accent-amber: #ea580c;
-    --glow: rgba(16, 185, 129, 0.15);
-  }
+    :root {
+        --background: #f8fafc;
+        --foreground: #0f172a;
+        --card-bg: rgba(255, 255, 255, 0.8);
+        --card-border: rgba(226, 232, 240, 0.8);
+        --accent-emerald: #059669;
+        --accent-amber: #ea580c;
+        --glow: rgba(16, 185, 129, 0.15);
+    }
 
-  .dark {
-    --background: #08090d;
-    --foreground: #f1f5f9;
-    --card-bg: rgba(15, 23, 42, 0.5);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --accent-emerald: #10b981;
-    --accent-amber: #f97316;
-    --glow: rgba(16, 185, 129, 0.2);
-  }
+    .dark {
+        --background: #08090d;
+        --foreground: #f1f5f9;
+        --card-bg: rgba(15, 23, 42, 0.5);
+        --card-border: rgba(255, 255, 255, 0.08);
+        --accent-emerald: #10b981;
+        --accent-amber: #f97316;
+        --glow: rgba(16, 185, 129, 0.2);
+    }
 }
 
-html,body {
+html,
+body {
     height: 100vh;
     margin: 0;
     padding: 0;
     background-color: var(--background);
 }
+
+main {
+    margin-top: 95px;
+}
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 @utility section {
     width: 100%;
-    height:fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     /* Mude de 'center' para 'safe center' ou use flex com padding generoso */
@@ -47,25 +54,25 @@ body {
     flex-grow: 1;
 }
 
-@utility content_container{
+@utility content_container {
     height: 100%;
-    width:100%;
+    width: 100%;
     max-width: 1440px;
-    @apply px-5 py-15 box-border
 }
 
+
 @utility highlight_text {
-    @apply bg-white/20
+    @apply bg-white/20;
 }
 @utility highlight_text-blue {
-    @apply bg-blue-950 text-white
+    @apply bg-blue-950 text-white;
 }
 @utility highlight_text-light-blue {
-    @apply bg-blue-500 text-white
+    @apply bg-blue-500 text-white;
 }
 @utility highlight_text-yellow {
-    @apply bg-yellow-400 text-black
+    @apply bg-yellow-400 text-black;
 }
 @utility highlight_text-green {
-    @apply bg-green-600 text-black
+    @apply bg-green-600 text-black;
 }

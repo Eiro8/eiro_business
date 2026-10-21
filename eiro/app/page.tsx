@@ -1,4 +1,3 @@
-import {SecondaryButton} from "@/components/ui/primary_button/Button";
 import Hero from "@/public/images/wavy_lines.png";
 import { CONTACT_INFO } from "./config/brand.config";
 import { ArrowRight, Clock, Mail, PhoneCall } from "lucide-react";
@@ -11,7 +10,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col pt-24 grow">
+    <main className="w-full flex flex-col grow">
       {/* HERO */}
       <section id="hero" className="section">
         <Image
@@ -20,11 +19,11 @@ export default function Home() {
           sizes="100vw"
           priority
           fill
-          className="z-0 absolute"/>
+          className="z-0 absolute"
+        />
         <div
           className="content_container md:h-150
-           grid md:grid-cols-[50%_auto] gap-10 z-10"
-        >
+           grid md:grid-cols-[50%_auto] gap-10 z-10">
           <h1 className="text-3xl md:text-7xl h-fit md:leading-19 font-bold self-start content-center text-white">
             Tecnologia testada, entregue com{" "}
             <span className="highlight_text">segurança.</span>
@@ -34,9 +33,15 @@ export default function Home() {
               Testamos cada dispositivo, embalamos com cuidado e entregamos com
               agilidade. Com a gente, você recebe inovação com segurança total.
             </p>
-            <Link href={"/sobre"} aria-label="Visualizar a página sobre nós" className="
+            <Link
+              href={"/sobre"}
+              aria-label="Visualizar a página sobre nós"
+              className="
               text-white font-semibold p-2 border-white border-2 rounded-md bg-transparent hover:bg-white hover:text-black duration-300 transition-colors
-              ">Saiba Mais</Link>
+              "
+            >
+              Saiba Mais
+            </Link>
           </span>
         </div>
       </section>
@@ -150,8 +155,7 @@ export default function Home() {
       </section>
       {/* CONTATO */}
       <section id="contato" className="section">
-        <div
-          className="md:grid md:grid-cols-[60%_40%] max-w-360 w-full h-full md:h-[500px] gap-3 p-5 flex flex-col">
+        <div className="md:grid md:grid-cols-[60%_40%] max-w-360 w-full h-full md:h-[500px] gap-3 p-5 flex flex-col">
           <div className="flex flex-col relative p-6 box-border w-full h-full rounded-2xl overflow-hidden">
             <Image
               src={contact_bg.src}
@@ -190,9 +194,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col p-5 gap-5 items-center grow justify-center text-black dark:text-white">
-            <div className="flex items-center w-full gap-3
+            <div
+              className="flex items-center w-full gap-3
               shadow shadow-black dark:shadow-white hover:shadow-blue-600
-              duration-300 hover:cursor-pointer p-5 rounded-3xl">
+              duration-300 hover:cursor-pointer p-5 rounded-3xl"
+            >
               <Mail />
               <span className="w-full">
                 <h4 className="font-bold text-lg">E-mail</h4>
@@ -207,13 +213,16 @@ export default function Home() {
                 href={`mailto:${CONTACT_INFO.email}`}
                 rel="noopener noreferrer"
                 aria-label="Entrar em contato via e-mail"
-                className="hover:fill-blue-500">
+                className="hover:fill-blue-500"
+              >
                 <ArrowRight className="duration-300 transition-all hover:text-blue-700" />
               </a>
             </div>
-            <div className="flex items-center w-full gap-3
+            <div
+              className="flex items-center w-full gap-3
               shadow shadow-black dark:shadow-white hover:shadow-blue-600
-              duration-300 hover:cursor-pointer p-5 rounded-3xl">
+              duration-300 hover:cursor-pointer p-5 rounded-3xl"
+            >
               <PhoneCall />
               <span className="w-full">
                 <h4 className="font-bold text-lg">Telefone</h4>
