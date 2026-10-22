@@ -1,16 +1,41 @@
 import Image from "next/image";
-import HeroIMG from "@/public/images/about_us.png";
+import hero_tech from "@/public/images/eiro_white_no_background.png";
 
 export default function Sobre() {
   return (
     <main className="h-full w-full">
-      <section className="section bg-black">
-        <Image src={HeroIMG} alt="background" className="object-cover"/>
-        <div className="content_container md:grid md:grid-cols-[30%_70%] h-full">
+      <section className="section bg-black overflow-hidden">
+        <div className="content_container flex flex-row p-6 text-white z-20 h-80 max-h-screen relative">
+          <Image
+            src={hero_tech}
+            alt="Background"
+            width={400}
+            className="object-fill absolute object-top
+          opacity-20 z-10 top-0 right-0
+          translate-y-10 translate-x-30 -rotate-10"
+          />
+
+          <div className="w-full h-full flex flex-col justify-between">
+            <p className="text-2xl sm:text-5xl font-bold text-start">
+              NOSSA
+              <br />
+              AMBIÇÃO
+            </p>
+            <h1 className="text-mdmd:text-2xl">SOBRE NÓS</h1>
+          </div>
+          <div className="w-full h-full flex flex-col items-end justify-end">
+            <p className="text-2xl sm:text-5xl font-bold text-end">
+              PELA
+              <br />
+              EXCELÊNCIA
+            </p>
+          </div>
         </div>
       </section>
       <section className="section">
-        <div className="content_container bg-amber-100"></div>
+        <div className="content_container">
+          <div className="h-screen w-full">glogloglo</div>
+        </div>
       </section>
     </main>
   );

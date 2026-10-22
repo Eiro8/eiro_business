@@ -1,11 +1,5 @@
 import { PAGES } from "@/app/config/pages.config";
-import {
-  Button,
-  SecondaryButton,
-  TertiaryButton,
-} from "@/components/ui/primary_button/Button";
 import Link from "next/link";
-import { Contact, Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/images/eiro_white_no_background.png";
 import { ThemeToggle } from "./components/theme-toggle";
