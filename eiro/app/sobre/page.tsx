@@ -34,7 +34,16 @@ export default function Sobre() {
       </section>
       <section className="section">
         <div className="content_container">
-          <div className="h-screen w-full">glogloglo</div>
+          <div className="h-screen w-full">
+
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="content_container">
+          <div className="h-screen w-full">
+
+          </div>
         </div>
       </section>
     </main>
